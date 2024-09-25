@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const books = [{
+                title: "The Great Gatsby",
+                author: "F. Scott Fitzgerald",
+                year: 1925
+            },
+            {
+                title: "To Kill a Mockingbird",
+                author: "Harper Lee",
+                year: 1960
+            },
+            {
+                title: "The Great Wall of China",
+                author: "Unknown",
+                year: 2002
+            }
+        ];
+
+        function booksDetails(books, callback) {
+            const titlesArr = books.map(book => book.title);
+            callback(titlesArr);
+        }
+
+        booksDetails(books, function callback(titlesArr) {
+            titlesArr.sort();
+            console.log(titlesArr.join(", "));
+        });
+    </script>
+
+</body>
+
+</html>

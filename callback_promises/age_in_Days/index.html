@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj={firstname:"ram",lastname:"surya",age: 2}
+        function agecalculate(obj ,callback){
+let fullname=obj.firstname+" "+obj.lastname
+let agedays=obj.age*365
+callback(fullname,agedays)
+        }
+        agecalculate(obj,function(fullname,age){
+            console.log(`name is ${fullname} age in days is ${age}`)
+        })
+    </script>
+</body>
+</html>
